@@ -1,0 +1,57 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: lightslategrey;
+   
+}
+body{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.list{
+    display: flex;
+    list-style: none;  
+}
+.item{
+    color: black;
+    margin: 0 2em;
+    font-size: 2rem;
+    margin: 0,1em;
+}
+.link{
+    position: relative;
+    text-decoration: none;
+    color: black;
+   
+
+}
+.link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: all 0.3s ease-in-out;
+}
+.link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: all 0.3s ease-in-out;
+}
+.link:hover::before, .link:hover::after{
+    width:100%;
+    left: 0;
+    
+}
+
